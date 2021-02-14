@@ -1,16 +1,19 @@
 {
   "name": "it-crowd-bot",
   "version": "1.0.0",
-  "description": "",
+  "description": "A discord bot to help in the #tech-support channel of my family's discord server.",
   "main": "index.js",
+  "dependencies": {
+    "discord.js": "^12.5.1"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": [
+    "discord",
+    "bot"
+  ],
   "author": "Thaddeus Cole",
-  "license": "MIT",
-  "dependencies": {
-    "discord.js": "^12.5.1",
-    "dotenv": "^8.2.0"
-  }
+  "license": "MIT"
 }
