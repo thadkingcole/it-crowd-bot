@@ -1,18 +1,19 @@
 const Discord = require("discord.js");
-const { prefix, token } = require("./config.json");
+const config = require("./config.json");
 const client = new Discord.Client();
 
 client.once("ready", () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
 
-client.on("message", (msg) => {
-  console.log(msg);
-  if (message.content === `${prefix}ping`) {
-    message.channel.send("Pong.");
-  } else if (message.content === `${prefix}beep`) {
-    message.channel.send("Boop.");
+client.on("message", (message) => {
+  // if the message is in the tech-support channel and starts with HELLO IT
+  if (
+    message.channel.id === config.channelId &&
+    message.content.startsWith("HELLO IT")
+  ) {
+    message.channel.send("Have you tried turning it off and on again?");
   }
 });
 
-client.login(token);
+client.login(config.token);
