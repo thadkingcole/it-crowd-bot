@@ -1,5 +1,5 @@
 const Discord = require("discord.js");
-const config = require("./config.json");
+const { prefix, token } = require("./config.json");
 const client = new Discord.Client();
 
 client.once("ready", () => {
@@ -8,9 +8,11 @@ client.once("ready", () => {
 
 client.on("message", (msg) => {
   console.log(msg);
-  if (msg.content === "ping") {
-    msg.reply("pong");
+  if (message.content === `${prefix}ping`) {
+    message.channel.send("Pong.");
+  } else if (message.content === `${prefix}beep`) {
+    message.channel.send("Boop.");
   }
 });
 
-client.login(process.env.BOT_TOKEN);
+client.login(token);
